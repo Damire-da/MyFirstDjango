@@ -1,0 +1,10 @@
+{% extends 'draft/layout.html' %}
+
+{% block content %}
+	{%for item in note%}
+	<h1>{{item.title}}</h1>
+		<p>{{item.text}}</p>
+	<a href="{% url 'page-delete' item.pk %}" class="btn btn-danger">Удалить</a>
+	<a href="{% url 'page-update' item.pk %}" class="btn btn-info">Изменить</a>
+	{%endfor%}
+{% endblock %}

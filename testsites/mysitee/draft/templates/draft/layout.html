@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'draft/css/main.css' %}">
+	<script src="https://kit.fontawesome.com/7620a623da.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<aside>
+		<img src="{% static 'draft/img/pictute.jpg' %}">
+		<span class="logo">Draft</span>
+		<h3>Навигация</h3>
+		<ul>
+			<a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Main</li></a>
+			<a href="{% url 'form_page' %}"><li><i class="far fa-newspaper"></i>Добавить статью</li></a>
+			<a href=""><li><i class="fas fa-pager"></i>Contacts</li></a>
+		</ul>
+	</aside>
+	<main>
+		{% block content %}
+		{% endblock %}
+	</main>
+</body>
+</html>

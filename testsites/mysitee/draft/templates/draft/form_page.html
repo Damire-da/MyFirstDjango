@@ -1,0 +1,11 @@
+{% extends 'draft/layout.html' %}
+{% block content %}
+<form  method="post">
+	{% csrf_token %}
+	
+	
+	<p>{{form.title}}</p><br>
+	<p>{{form.text}}</p><br>
+	
+	<button class="btn btn-success" type="submit">добавить текст</button>
+{% endblock %}
