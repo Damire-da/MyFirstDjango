@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-uwa_+_fab@y1udkb&gh2we0-oud7ko^q*q5flc^**0)lm$2goe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['damiroro.pythonanywhere.com',]
 
 
 # Application definition
@@ -120,9 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/'),
+    os.path.join(BASE_DIR, '/static/'),
 ]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static') без него работает верхний список
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
